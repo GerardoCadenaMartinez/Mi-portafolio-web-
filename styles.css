@@ -1,0 +1,71 @@
+body {      /*el body se refiere al cuerpo del html */
+  background: #1f1f1f; /*el background se refiere al color de fondo del html */
+  color: #f0f0f0;
+}
+/*  se define en este bloque de declaracion al  color del fondo de pantalla     */
+
+
+/*se abre el container para la imagen*/
+.header-container {  /* se abre el bloque de declaracion para la foto*/
+  display: flex; /* Activa Flexbox, un sistema de diseño en CSS que te permite organizar los elementos hijos*/
+  align-items: center;/* Alinea verticalmente los elementos dentro del contenedor. En este caso, la foto y el texto estarán centrados en altura si hay diferencia de tamaño.*/
+  justify-content: flex-start;/*Alinea los elementos hacia el inicio del eje principal, que en este caso es horizontal porque está en row-reverse (ver más abajo).*/
+  gap: 50px; /*Agrega un espacio de 20 píxeles entre los elementos (entre el texto y la foto).*/
+  padding: 30px; /*Agrega un espacio interno de 20px entre el borde del contenedor y su contenido, para que no quede pegado a los bordes.*/
+  max-width: 1200px; /*Limita el ancho máximo del contenedor a 900 píxeles, para que no se haga demasiado ancho en pantallas grandes.*/
+  margin: 0 auto; /*Centra el contenedor horizontalmente en la página. 0 es el margen superior/inferior, y auto en los lados lo centra.*/
+  flex-direction: row-reverse; /* invierte el orden: foto a la derecha, texto a la izquierda */
+}
+
+/*se abre el container para la el texto*/
+.header-text { /* es la clase CSS para darle estilo al bloque de texto de tu encabezado.*/
+  text-align: left; /* ahora alineamos a la izquierda */
+  flex: 1;/*La propiedad flex: 1; le dice al navegador que ese elemento debe ocupar todo el espacio disponible que pueda dentro de su contenedor flex.*/
+}
+/* se cierra bloque de declaracion a la foto y el texto alineado */
+
+
+
+/*se abre el bloque para el NAV*/
+.minimal-nav {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.minimal-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 40px;
+}
+
+.minimal-nav li a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.minimal-nav li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #00ffe7; /* línea de color neón suave */
+  transition: width 0.3s;
+}
+
+.minimal-nav li a:hover::after {
+  width: 100%;
+}
+
+.minimal-nav li a:hover {
+  color: #00ffe7;
+}
+

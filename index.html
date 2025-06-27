@@ -2,26 +2,33 @@
 <html lang="es">
 
 <head> <!-- aqui va dentro todo el css y javascript--> 
-
   <meta charset="UTF-8"> <!-- se define la condicion del texto--> 
-
+ <link rel="stylesheet" href="styles.css" />
   <title>Portafolio By Gerardo Cadena Martinez</title>  <!--definimos como se llamara la pagina web-->
 </head>  <!--se cierra el header-->
 
 <body> <!--contiene todo lo visible de la pagina web-->
 
+
+  <div class="header-container"> <!--se aplica el bloque general de encabezado-->
+  <div class="header-text"> <!--se aplica el bloque de texto que va dentro del encabezado-->
   <h1>Bienvenido a mi Portafolio WEB</h1> <!--se define para el titulo principal o encabezado-->
   <p>Lic. Gerardo Cadena Martinez</p> <!--organiza y separa el texto en parrafos-->
   <p>Consultor y asesor en las Tecnologias de la informacion</p>
+    </div> <!--se cierra div de encabezado-->
+  <img src="fotoperfil.png" alt="Foto de Gerardo" class="profile-photo" />
+</div> <!--se cierra div de texto-->
 
 
-  <nav> <!--se crea NAV ya que se crea un bloque de navegacion-->
-    <a href="#Acerca-de-mi">Acerca de mi</a>
-    <a href="#Experiencia-Profecional">Experiencia Profesional</a>
-    <a href="#Proyectos">Proyectos</a>
-    <a href="#Servicios-Profecionales">Servicios Profecionales</a>
-    <a href="#Contacto">Contacto</a>
-  </nav>
+  <nav class="minimal-nav"> <!--se crea NAV ya que se crea un bloque de navegacion-->
+    <ul> <!--Se usa para crear una lista de elementos donde el orden no importa. Normalmente se muestran con viñetas-->
+    <li><a href="#Acerca-de-mi">Acerca de mi</a></li> <!-- li Se usa para definir cada elemento individual dentro de una lista-->
+    <li><a href="#Experiencia-Profecional">Experiencia Profesional</a></li>
+    <li><a href="#Proyectos">Proyectos</a></li>
+    <li><a href="#Servicios-Profecionales">Servicios Profecionales</a></li>
+   <li><a href="#Contacto">Contacto</a></li>
+   </ul> <!--Se usa para crear una lista de elementos donde el orden no importa. Normalmente se muestran con viñetas-->
+</nav>
 
   <section id="Acerca-de-mi"> <!--ingresamos el 1 section--> <!--NOTA ES MEJOR USAR SECTION QUE DIV YA QUE SECTION SI ESTA SEMANTICADO Y DIV NO-->
 <h1>Acerca de mi</h1>
