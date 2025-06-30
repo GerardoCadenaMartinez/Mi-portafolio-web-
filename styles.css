@@ -68,4 +68,68 @@ body {      /*el body se refiere al cuerpo del html */
 .minimal-nav li a:hover {
   color: #00ffe7;
 }
+/* se cierra el bloque del nav */
 
+ body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #121212;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      color: #ccc;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      border: 1px solid #00bfff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      padding: 30px;
+      max-width: 600px;
+      width: 100%;
+      transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: #33ccff;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #00bfff;
+    }
+
+    .card p, .card li {
+      color: #ddd;
+      line-height: 1.5;
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #00bfff;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
