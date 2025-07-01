@@ -12,7 +12,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0 40px 40px 40px; 
- padding-top: 120px; /* dale más espacio *//
+  padding-top: 120px; /* dale más espacio para nav fijo */
 }
 
 /* ===========================
@@ -176,43 +176,6 @@ ul li {
   .profile-photo {
     max-width: 150px;
   }
-.hero-title {
-  min-height: 18vh; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 80px 0 0 0;  /* 💡 ESTO ES CLAVE: 80px de margen arriba */
-  font-size: 3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  background: linear-gradient(135deg, #004d40, #00BFA5);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-align: center;
-}
-
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 1.0rem; /* tablets y pantallas medianas */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.0rem; /* móviles grandes */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.0rem; /* móviles pequeños */
-  }
-}
-
 
   .minimal-nav ul {
     flex-direction: column;
@@ -221,6 +184,23 @@ ul li {
 
   .minimal-nav {
     padding: 15px 0;
+  }
+
+  /* Ajuste tamaño título en móviles */
+  .hero-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 1rem; /* tablets y pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1rem; /* móviles grandes y pequeños */
   }
 }
 
@@ -313,7 +293,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0; /* Sin margen arriba extra */
+  margin: 80px 0 0 0; /* Añado margen arriba para que no tape el nav */
   font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -324,4 +304,5 @@ footer {
   color: transparent;
   user-select: none;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
 }
