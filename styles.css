@@ -8,8 +8,8 @@ body {      /*el body se refiere al cuerpo del html */
 
 
 .profile-photo {
-  width: 180px;          /* Tamaño fijo, ajusta a tu gusto */
-  height: 180px;         /* Igual al width para que sea cuadrada */
+  max-width: 180px;          /* Tamaño fijo, ajusta a tu gusto */
+        /* Igual al width para que sea cuadrada */
   object-fit: cover;     /* Para que no se deforme */
   border-radius: 50%;    /* La hace redonda */
   border: 3px solid #00bfff;  /* Borde del mismo tono neón */
@@ -22,6 +22,17 @@ body {      /*el body se refiere al cuerpo del html */
 }
 
 
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Foto arriba, texto abajo */
+    text-align: center;     /* Centra el texto */
+    gap: 20px;              /* Espaciado más pequeño */
+  }
+
+  .header-text {
+    text-align: center;     /* Centra texto en móviles */
+  }
+}
 
 
 
