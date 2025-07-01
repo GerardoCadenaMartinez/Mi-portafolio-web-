@@ -260,3 +260,23 @@ footer {
     padding: 1rem;
   }
 }
+
+/* estilo hero */
+.hero-title {
+  height: 18vh;                /* Ocupa toda la pantalla */
+  display: flex;                
+  justify-content: center;      /* Centra horizontal */
+  align-items: center;          /* Centra vertical */
+  margin: 0;                   /* Sin margen */
+  font-size: 3rem;              /* Grande y llamativo */
+  font-weight: 900;
+  text-transform: uppercase;    /* Mayúsculas */
+  letter-spacing: 5px;          /* Espacio entre letras */
+  color: #00BFA5;               /* Color verde agua */
+  background: linear-gradient(135deg, #004d40, #00BFA5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  user-select: none;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
