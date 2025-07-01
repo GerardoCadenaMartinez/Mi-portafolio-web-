@@ -39,7 +39,7 @@ body {
   gap: 50px;                      /* Espacio entre elementos */
   padding: 30px;                  /* Espacio interno */
   max-width: 1200px;              /* Máximo ancho del contenedor */
-  margin: 0 auto;                 /* Centrado horizontal */
+margin: 20px auto 0 auto;
   flex-direction: row-reverse;    /* Orden: imagen a la derecha, texto a la izquierda */
 }
 
