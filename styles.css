@@ -198,19 +198,19 @@ ul li {
 
 @media (max-width: 1024px) {
   .hero-title {
-    font-size: 1.5rem; /* tablets y pantallas medianas */
+    font-size: 1.0rem; /* tablets y pantallas medianas */
   }
 }
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.4rem; /* móviles grandes */
+    font-size: 1.0rem; /* móviles grandes */
   }
 }
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.4rem; /* móviles pequeños */
+    font-size: 1.0rem; /* móviles pequeños */
   }
 }
 
