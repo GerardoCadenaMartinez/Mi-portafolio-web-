@@ -178,11 +178,42 @@ ul li {
   }
 
   .hero-title {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: center;
-    width: 100%;
+  font-size: 3rem; /* tamaño normal escritorio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  margin: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background: linear-gradient(135deg, #004d40, #00BFA5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  user-select: none;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem; /* tablets y pantallas medianas */
   }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem; /* móviles grandes */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.4rem; /* móviles pequeños */
+  }
+}
+
 
   .minimal-nav ul {
     flex-direction: column;
