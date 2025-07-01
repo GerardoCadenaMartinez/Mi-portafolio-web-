@@ -176,14 +176,13 @@ ul li {
   .profile-photo {
     max-width: 150px;
   }
-
-  .hero-title {
-  font-size: 2rem; /* tamaño normal escritorio */
+.hero-title {
+  min-height: 18vh; 
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 20vh;
-  margin: 0;
+  margin: 80px 0 0 0;  /* 💡 ESTO ES CLAVE: 80px de margen arriba */
+  font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 5px;
