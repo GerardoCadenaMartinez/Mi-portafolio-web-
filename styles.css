@@ -3,224 +3,210 @@
   box-sizing: border-box;
 }
 
-/* Estilos generales del cuerpo de la página */
+/* ===========================
+   Estilos generales del cuerpo de la página
+   =========================== */
 body {
   background: #1f1f1f;
   color: #f0f0f0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0 40px 40px 40px; /* solo lateral y abajo */
-  padding-top: 80px; /* espacio para nav fijo */
+  padding: 0 40px 40px 40px; 
+  padding-top: 80px; /* Espacio para nav fijo */
 }
 
-
-/* Estilo para la foto de perfil */
+/* ===========================
+   Foto de perfil
+   =========================== */
 .profile-photo {
-  max-width: 180px;                 /* Ancho máximo */
-  width: 100%;                     /* Ancho adaptable */
-  height: auto;                    /* Altura proporcional */
-  object-fit: cover;               /* Ajusta la imagen para cubrir el contenedor sin deformar */
-  border-radius: 50%;              /* Imagen redonda */
-  border: 3px solid #00bfff;      /* Borde azul neón */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transiciones suaves para animación */
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00bfff;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Efecto hover para la foto: zoom y sombra neón */
 .profile-photo:hover {
-  transform: scale(1.05);          /* Agranda suavemente */
-  box-shadow: 0 0 20px #00ffe7;   /* Sombra brillante azul */
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffe7;
 }
 
-/* Contenedor del encabezado con imagen y texto */
+/* ===========================
+   Contenedor del encabezado
+   =========================== */
 .header-container {
-  display: flex;                   /* Layout flexbox horizontal */
-  align-items: center;             /* Alinea verticalmente */
-  justify-content: flex-start;     /* Alinea al inicio horizontalmente */
-  gap: 50px;                      /* Espacio entre elementos */
-  padding: 30px;                  /* Espacio interno */
-  max-width: 1200px;              /* Máximo ancho del contenedor */
-margin: 60px auto 0 auto;
-  flex-direction: row-reverse;    /* Orden: imagen a la derecha, texto a la izquierda */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto; /* CORREGIDO: quitado margin-top para evitar duplicar espacio */
+  flex-direction: row-reverse;
 }
 
-/* Estilo para el texto dentro del header */
+/* ===========================
+   Texto dentro del header
+   =========================== */
 .header-text {
-  text-align: left;               /* Alineación izquierda */
-  flex: 1;                       /* Ocupa el espacio disponible */
+  text-align: left;
+  flex: 1;
 }
 
-/* Estilos para la barra de navegación */
+/* ===========================
+   Barra de navegación fija
+   =========================== */
 .minimal-nav {
-  position: fixed;   /* La deja fija */
-  top: 0;            /* Pegada arriba de la ventana */
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;       /* Que abarque todo el ancho */
-  background-color: #1f1f1f; /* Mismo fondo para que se vea bien */
-  z-index: 1000;     /* Que quede por encima de todo */
-  padding: 20px 0;   /* Tu mismo padding */
+  width: 100%;
+  background-color: #1f1f1f;
+  z-index: 1000;
+  padding: 20px 0;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
-    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3); /* Sombra con tono neón */
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
 }
 
-/* Lista del menú con flexbox horizontal */
 .minimal-nav ul {
-  list-style: none;              /* Sin viñetas */
+  list-style: none;
   padding: 0;
   margin: 0;
-  display: inline-flex;          /* Flex horizontal en línea */
-  gap: 40px;                    /* Espacio entre enlaces */
+  display: inline-flex;
+  gap: 40px;
 }
 
-/* Estilo de los enlaces del menú */
 .minimal-nav li a {
-  text-decoration: none;         /* Sin subrayado */
-  color: #ffffff;                /* Color claro */
-  font-size: 18px;               /* Tamaño de texto */
-  position: relative;            /* Para pseudo-elementos */
-  transition: color 0.3s;       /* Transición suave de color */
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s;
 }
 
-/* Línea animada debajo de enlaces */
 .minimal-nav li a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: 0%;                    /* Empieza oculta */
+  width: 0%;
   height: 2px;
-  background-color: #00ffe7;    /* Línea azul neón */
-  transition: width 0.3s;       /* Transición para ancho */
+  background-color: #00ffe7;
+  transition: width 0.3s;
 }
 
-/* Cuando se pasa el mouse, la línea se extiende */
 .minimal-nav li a:hover::after {
   width: 100%;
 }
 
-/* Cambia color del texto al pasar el mouse */
 .minimal-nav li a:hover {
   color: #00ffe7;
 }
 
-/* Tarjetas de contenido */
+/* ===========================
+   Tarjetas de contenido
+   =========================== */
 .card {
-  background: #1e1e1e;           /* Fondo oscuro */
-  border-radius: 12px;           /* Bordes redondeados */
-  border: 1px solid #00bfff;     /* Borde azul */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* Sombra */
-  padding: 30px;                 /* Espaciado interno */
-  max-width: 600px;              /* Ancho máximo */
-  width: 100%;                  /* Ancho adaptable */
-  transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones */
-  margin: 20px auto;             /* Margen arriba y abajo, centrado horizontal */
+  background: #1e1e1e;
+  border-radius: 12px;
+  border: 1px solid #00bfff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;
 }
 
-/* Efecto hover para tarjeta: levanta y cambia sombra */
 .card:hover {
   border-color: #33ccff;
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 8px 20px rgba(0,0,0,0.7);
 }
 
-/* Encabezados h2 dentro de tarjeta */
 .card h2 {
-  margin-top: 0;                /* Sin margen arriba */
-  color: #00bfff;               /* Color azul */
+  margin-top: 0;
+  color: #00bfff;
 }
 
-/* Texto y listas dentro de tarjeta */
 .card p, .card li {
-  color: #ddd;                  /* Texto gris claro */
-  line-height: 1.5;             /* Altura de línea para legibilidad */
+  color: #ddd;
+  line-height: 1.5;
 }
 
-/* Títulos de secciones */
 .section-title {
   font-size: 20px;
   margin-bottom: 15px;
   color: #00bfff;
 }
 
-/* Estilos para listas ul */
 ul {
   padding-left: 20px;
   margin: 0;
 }
 
-/* Espacio entre elementos de lista */
 ul li {
   margin-bottom: 8px;
 }
+
 /* ===========================
    Corrección responsive móvil
    =========================== */
 @media (max-width: 768px) {
   body {
-    padding: 20px;  /* Menor padding general */
-    padding-top: 120px; /* Más espacio para nav fijo */
+    padding: 20px;
+    padding-top: 120px; /* Espacio para nav fijo más grande en móvil */
   }
 
   .header-container {
-    flex-direction: column; /* Cambia de fila a columna */
-    align-items: center;    /* Centra horizontalmente */
-    text-align: center;     /* Centra el texto */
-    gap: 20px;              /* Menor separación */
-    padding: 20px;          /* Padding más reducido */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
   }
 
   .header-text {
-    flex: unset; /* No forzar ancho */
+    flex: unset;
   }
 
   .profile-photo {
-    max-width: 150px; /* Foto más pequeña */
+    max-width: 150px;
   }
 
   .hero-title {
-    font-size: 2rem;   /* Tamaño más pequeño */
-    height: auto;      /* Altura automática */
-    min-height: unset; /* Elimina min-height gigante */
-    padding: 0;        /* Sin padding extra */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 100%;
   }
 
   .minimal-nav ul {
-    flex-direction: column; /* Menú vertical */
-    gap: 15px;              /* Espacio entre links menor */
+    flex-direction: column;
+    gap: 15px;
   }
 
   .minimal-nav {
-    padding: 15px 0; /* Padding más compacto */
+    padding: 15px 0;
   }
 }
 
+/* ===========================
+   Sección de contacto y footer
+   =========================== */
 #Contacto {
-  text-align: center;       /* Centra el texto dentro */
-  display: flex;            /* Flexbox para centrar elementos hijos */
-  flex-direction: column;   /* Apila verticalmente */
-  align-items: center;      /* Centra horizontalmente los hijos */
-  justify-content: center;  /* Centra verticalmente si quieres (opcional) */
-  padding: 20px;            /* Espaciado interno */
-}
-
-
-
-
-footer {
   text-align: center;
-  padding: 10px 20px;
-  color: #ccc;
-  font-size: 14px;
-  width: 100%;
-}
-
-/* Estilo general del formulario */
-#Contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   max-width: 500px;
   margin: 0 auto;
-  padding: 2rem;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
 }
 
 #Contacto h1 {
@@ -275,25 +261,33 @@ footer {
   background-color: #0056b3;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   #Contacto {
     padding: 1rem;
   }
 }
 
-/* estilo hero */
+footer {
+  text-align: center;
+  padding: 10px 20px;
+  color: #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* ===========================
+   Título principal (Hero)
+   =========================== */
 .hero-title {
-  height: 18vh;                /* Ocupa toda la pantalla */
-  display: flex;                
-  justify-content: center;      /* Centra horizontal */
-  align-items: center;          /* Centra vertical */
-  margin: 0;                   /* Sin margen */
-  font-size: 3rem;              /* Grande y llamativo */
+  min-height: 18vh; /* Mantén altura flexible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Sin margen arriba extra */
+  font-size: 3rem;
   font-weight: 900;
-  text-transform: uppercase;    /* Mayúsculas */
-  letter-spacing: 5px;          /* Espacio entre letras */
-  color: #00BFA5;               /* Color verde agua */
+  text-transform: uppercase;
+  letter-spacing: 5px;
   background: linear-gradient(135deg, #004d40, #00BFA5);
   background-clip: text;
   -webkit-background-clip: text;
