@@ -10,7 +10,9 @@ body {
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
   margin: 0;                         /* Sin margen por defecto */
   padding: 40px;                    /* Espacio interno alrededor */
+  padding-top: 80px; /* 👈 Ajusta esto al alto real de tu nav */
 }
+
 
 /* Estilo para la foto de perfil */
 .profile-photo {
@@ -49,10 +51,16 @@ body {
 
 /* Estilos para la barra de navegación */
 .minimal-nav {
-  background-color: #1f1f1f;     /* Fondo oscuro */
-  padding: 20px 0;               /* Espaciado vertical */
-  text-align: center;            /* Centrar texto */
-  font-family: 'Segoe UI', sans-serif;  /* Tipografía */
+  position: fixed;   /* La deja fija */
+  top: 0;            /* Pegada arriba de la ventana */
+  left: 0;
+  width: 100%;       /* Que abarque todo el ancho */
+  background-color: #1f1f1f; /* Mismo fondo para que se vea bien */
+  z-index: 1000;     /* Que quede por encima de todo */
+  padding: 20px 0;   /* Tu mismo padding */
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3); /* Sombra con tono neón */
 }
 
 /* Lista del menú con flexbox horizontal */
