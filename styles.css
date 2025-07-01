@@ -1,80 +1,47 @@
-body {      /*el body se refiere al cuerpo del html */
-  background: #1f1f1f; /*el background se refiere al color de fondo del html */
-  color: #f0f0f0;
+/* Global box-sizing para que todo respete padding y border */
+* {
+  box-sizing: border-box;
 }
-/*  se define en este bloque de declaracion al  color del fondo de pantalla     */
 
-
-
+body {
+  background: #1f1f1f;
+  color: #f0f0f0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+}
 
 .profile-photo {
-  max-width: 180px;          /* Tamaño fijo, ajusta a tu gusto */
-        /* Igual al width para que sea cuadrada */
-  object-fit: cover;     /* Para que no se deforme */
-  border-radius: 50%;    /* La hace redonda */
-  border: 3px solid #00bfff;  /* Borde del mismo tono neón */
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00bfff;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .profile-photo:hover {
-  transform: scale(1.05);  /* Zoom suave */
-  box-shadow: 0 0 20px #00ffe7; /* Sombra brillante neón */
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffe7;
 }
 
-
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column; /* Foto arriba, texto abajo */
-    text-align: center;     /* Centra el texto */
-    gap: 20px;              /* Espaciado más pequeño */
-  }
-
-  .header-text {
-    text-align: center;     /* Centra texto en móviles */
-  }
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: row-reverse;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*se abre el container para la imagen*/
-.header-container {  /* se abre el bloque de declaracion para la foto*/
-  display: flex; /* Activa Flexbox, un sistema de diseño en CSS que te permite organizar los elementos hijos*/
-  align-items: center;/* Alinea verticalmente los elementos dentro del contenedor. En este caso, la foto y el texto estarán centrados en altura si hay diferencia de tamaño.*/
-  justify-content: flex-start;/*Alinea los elementos hacia el inicio del eje principal, que en este caso es horizontal porque está en row-reverse (ver más abajo).*/
-  gap: 50px; /*Agrega un espacio de 20 píxeles entre los elementos (entre el texto y la foto).*/
-  padding: 30px; /*Agrega un espacio interno de 20px entre el borde del contenedor y su contenido, para que no quede pegado a los bordes.*/
-  max-width: 1200px; /*Limita el ancho máximo del contenedor a 900 píxeles, para que no se haga demasiado ancho en pantallas grandes.*/
-  margin: 0 auto; /*Centra el contenedor horizontalmente en la página. 0 es el margen superior/inferior, y auto en los lados lo centra.*/
-  flex-direction: row-reverse; /* invierte el orden: foto a la derecha, texto a la izquierda */
+.header-text {
+  text-align: left;
+  flex: 1;
 }
 
-/*se abre el container para la el texto*/
-.header-text { /* es la clase CSS para darle estilo al bloque de texto de tu encabezado.*/
-  text-align: left; /* ahora alineamos a la izquierda */
-  flex: 1;/*La propiedad flex: 1; le dice al navegador que ese elemento debe ocupar todo el espacio disponible que pueda dentro de su contenedor flex.*/
-}
-/* se cierra bloque de declaracion a la foto y el texto alineado */
-
-
-
-/*se abre el bloque para el NAV*/
 .minimal-nav {
   background-color: #1f1f1f;
   padding: 20px 0;
@@ -105,7 +72,7 @@ body {      /*el body se refiere al cuerpo del html */
   bottom: -5px;
   width: 0%;
   height: 2px;
-  background-color: #00ffe7; /* línea de color neón suave */
+  background-color: #00ffe7;
   transition: width 0.3s;
 }
 
@@ -116,65 +83,65 @@ body {      /*el body se refiere al cuerpo del html */
 .minimal-nav li a:hover {
   color: #00ffe7;
 }
-/* se cierra el bloque del nav */
 
+.card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  border: 1px solid #00bfff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;
+}
 
+.card:hover {
+  border-color: #33ccff;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
 
-/* se abre bloque para el recuadro de acerca de mi*/
- body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: #121212;
-      margin: 0;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      color: #ccc;
-    }
+.card h2 {
+  margin-top: 0;
+  color: #00bfff;
+}
 
-    .card {
-      background: #1e1e1e;
-      border-radius: 12px;
-      border: 1px solid #00bfff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      padding: 30px;
-      max-width: 600px;
-      width: 100%;
-      transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.card p, .card li {
+  color: #ddd;
+  line-height: 1.5;
+}
 
-    .card:hover {
-      border-color: #33ccff;
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-    }
+.section-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #00bfff;
+}
 
-    .card h2 {
-      margin-top: 0;
-      color: #00bfff;
-    }
+ul {
+  padding-left: 20px;
+  margin: 0;
+}
 
-    .card p, .card li {
-      color: #ddd;
-      line-height: 1.5;
-    }
+ul li {
+  margin-bottom: 8px;
+}
 
-    .section-title {
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: #00bfff;
-    }
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
 
-    ul {
-      padding-left: 20px;
-      margin: 0;
-    }
+  .header-text {
+    text-align: center;
+  }
 
-    ul li {
-      margin-bottom: 8px;
-    }
-
-  /* se cierra bloque*/
-
- 
+  .minimal-nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
