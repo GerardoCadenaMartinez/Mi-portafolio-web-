@@ -5,6 +5,43 @@ body {      /*el body se refiere al cuerpo del html */
 /*  se define en este bloque de declaracion al  color del fondo de pantalla     */
 
 
+
+
+.profile-photo {
+  width: 180px;          /* Tamaño fijo, ajusta a tu gusto */
+  height: 180px;         /* Igual al width para que sea cuadrada */
+  object-fit: cover;     /* Para que no se deforme */
+  border-radius: 50%;    /* La hace redonda */
+  border: 3px solid #00bfff;  /* Borde del mismo tono neón */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);  /* Zoom suave */
+  box-shadow: 0 0 20px #00ffe7; /* Sombra brillante neón */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*se abre el container para la imagen*/
 .header-container {  /* se abre el bloque de declaracion para la foto*/
   display: flex; /* Activa Flexbox, un sistema de diseño en CSS que te permite organizar los elementos hijos*/
