@@ -9,6 +9,7 @@
 </head>  <!--se cierra el header-->
 
 <body> <!--contiene todo lo visible de la pagina web-->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="script.js"></script> <!--se genera el script -->
 
   <div class="header-container"> <!--se aplica el bloque general de encabezado-->
@@ -84,12 +85,17 @@
 </section>
 </div>
 
-   <section id="Contacto"> <!--ingresamos el 4 section-->
-<h1>Contacto</h1>
-<div class="info"><!--se abre bloque css-->
-<p>compulab.jaral@gmail.com</p> <!--se cierra bloque css-->
-</div>
-   </section>
+<section id="Contacto">
+  <h1>Contacto</h1>
+  <p>Déjame un mensaje y te responderé pronto.</p>
+  <p>CORREO OFICIAL: compulab.jaral@gmail.com</p>
+  <form id="contact-form">
+    <input type="text" name="from_name" placeholder="Tu nombre" required>
+    <input type="email" name="reply_to" placeholder="Tu correo" required>
+    <textarea name="message" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
 
     <footer> <!--se define la seccion del final de la pagina derechos de autor-->
     &copy; 2025 Gerardo Cadena Martinez - Todos los derechos reservados.
